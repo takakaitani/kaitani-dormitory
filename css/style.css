@@ -1,0 +1,170 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    color: #000;
+    background-color: #f6f6f6;
+    box-sizing: border-box;
+}
+
+.dynamic-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #f6f6f6;
+    color: #000;
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 70px;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1140px) {
+    .dynamic-header {
+        padding: 0 32px;
+    }
+}
+
+@media (max-width: 540px) {
+    .dynamic-header {
+        padding: 0 24px;
+    }
+}
+
+.dynamic-header .title {
+    font-size: 1.5em;
+    padding: 1em 0;
+    font-family: '游明朝', 'Yu Mincho', serif;
+}
+
+.dynamic-header nav {
+    display: flex;
+}
+
+.dynamic-header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.dynamic-header nav ul li {
+    margin: 0 1em;
+}
+
+.dynamic-header nav ul li a {
+    text-decoration: none;
+    color: #000;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+
+.menu-icon {
+    width: 30px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-icon span {
+    display: block;
+    height: 2px;
+    width: 100%;
+    background-color: #000;
+    transition: all 0.3s ease;
+    transform-origin: center;
+}
+
+.menu-icon.open span:nth-child(1) {
+    transform: rotate(45deg) translate(0, 12.7px);
+}
+
+.menu-icon.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-icon.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(0, -12.7px);
+}
+
+.menu-modal {
+    position: fixed;
+    top: 84px;
+    left: 0;
+    width: 100%;
+    background-color: rgba(249, 249, 249, 0.95);
+    z-index: 1000;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: none;
+    overflow-y: auto;
+    max-height: calc(100vh - 75px);
+}
+
+@media (max-width: 1140px) {
+    .dynamic-header nav ul {
+        display: none;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
+
+.menu-modal ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.menu-modal li {
+    padding: 15px 0;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.menu-modal a {
+    text-decoration: none;
+    color: #000;
+    display: block;
+    font-size: 1.2em;
+}
+
+main {
+    margin-top: 80px;
+    padding: 1em;
+}
+
+.dynamic-footer {
+    background-color: #f6f6f6;
+    position: relative;
+    color: #808080;
+    padding: 1em;
+    border-top: 1px solid #ccc;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.dynamic-footer .footer-title {
+    font-size: 1.2em;
+    font-family: '游明朝', 'Yu Mincho', serif;
+}
+
+.hidden {
+    transform: translateY(-100%);
+}
+
+.visible {
+    transform: translateY(0);
+}
