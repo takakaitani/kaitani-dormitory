@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Serif JP', serif;
+  }
+}
+
+@layer components {
+  .page-title {
+    @apply text-4xl md:text-5xl font-bold mb-12 relative inline-block;
+  }
+
+  .page-title::after {
+    content: '';
+    @apply absolute left-0 -bottom-3 h-0.5 w-full bg-gray-900;
+  }
+
+  .section {
+    @apply py-16 px-4 md:px-8 max-w-4xl mx-auto;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-sm border border-gray-100 p-6 transition-all duration-300 hover:shadow-md;
+  }
+}
