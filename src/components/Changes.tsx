@@ -1,5 +1,5 @@
 import React from 'react';
-
+// TODO: 現状使わないが、ニュース画面実装時のために残しておく
 export const Changes: React.FC = () => {
   return (
     <section id="changes" className="section">
