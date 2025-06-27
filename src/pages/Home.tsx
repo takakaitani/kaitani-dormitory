@@ -64,7 +64,7 @@ export const Home: React.FC = () => {
                 <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                   <Users size={24} />
                 </div>
-                <span className="text-gray-900 font-medium">生活について</span>
+                <span className="text-gray-900 font-medium">生活</span>
                 <ArrowRight size={16} className="text-blue-600" />
               </div>
             </Link>
@@ -74,7 +74,7 @@ export const Home: React.FC = () => {
                 <div className="w-12 h-12 flex items-center justify-center rounded-full bg-blue-100 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                   <HomeIcon size={24} />
                 </div>
-                <span className="text-gray-900 font-medium">サポートについて</span>
+                <span className="text-gray-900 font-medium">サポート</span>
                 <ArrowRight size={16} className="text-blue-600" />
               </div>
             </Link>

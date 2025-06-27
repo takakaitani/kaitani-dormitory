@@ -4,8 +4,7 @@ import { Plus, Minus } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
-  const currentYear = new Date().getFullYear();
-  
+
   return (
     <footer className="bg-blue-900 text-white py-16">
       <div className="max-w-7xl mx-auto px-4">
@@ -42,18 +41,18 @@ export const Footer: React.FC = () => {
                 isAboutOpen ? 'max-h-48' : 'max-h-0'
               }`}
             >
-              <Link to="/message" className="block py-2 pl-4">寮長メッセージ</Link>
-              <Link to="/life" className="block py-2 pl-4">生活</Link>
-              <Link to="/support" className="block py-2 pl-4">サポート</Link>
+              <Link to="/about/message" className="block py-2 pl-4">寮長メッセージ</Link>
+              <Link to="/about/life" className="block py-2 pl-4">生活</Link>
+              <Link to="/about/support" className="block py-2 pl-4">サポート</Link>
             </div>
           </div>
-          <Link to="/results" className="block">実績</Link>
-          <Link to="/application" className="block">応募</Link>
+          <Link to="/about/results" className="block">実績</Link>
+          <Link to="/about/application" className="block">応募</Link>
         </div>
-        
+
         <div className="mt-12 pt-8 border-t border-blue-800">
-          <p className="text-center text-blue-200">
-            © {currentYear} 甲斐谷寮. All rights reserved.
+          <p className="text-center text-sm text-blue-200">
+            © 株式会社甲斐谷忍プロダクツ
           </p>
         </div>
       </div>
